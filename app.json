@@ -1,30 +1,47 @@
 {
   "expo": {
-    "name": "scroll_shame",
-    "slug": "scroll_shame",
+    "name": "Scroll Shame",
+    "slug": "scroll-shame",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0a0a0a"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.scrollshame.app",
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "Günlük hatırlatıcılar ile scroll alışkanlıklarını takip etmene yardımcı oluyoruz."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0a0a0a"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "package": "com.scrollshame.app",
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "./plugins/withUsageStats",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#0a0a0a",
+          "defaultChannel": "default"
+        }
+      ]
+    ],
+    "scheme": "scrollshame"
   }
 }

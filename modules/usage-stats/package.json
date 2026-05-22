@@ -1,0 +1,10 @@
+{
+  "name": "usage-stats",
+  "version": "1.0.0",
+  "description": "Local Expo module for Android UsageStatsManager",
+  "main": "src/index.ts",
+  "source": "src/index.ts",
+  "android": {
+    "gradlePlugins": []
+  }
+}
